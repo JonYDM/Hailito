@@ -1,0 +1,94 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.audio {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.audio button {
+    background-color: rgb(39, 58, 228);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.audio button:hover {
+    background-color: rgb(5, 9, 44);
+}
+
+.contenedor {
+    position: relative;
+    width: 100%; /* Cambiamos el ancho para que sea 100% del contenedor padre */
+    max-width: 700px; /* Añadimos un ancho máximo para evitar que la imagen se vuelva demasiado grande en pantallas grandes */
+}
+
+.contenedor img {
+    width: 100%;
+    height: auto; /* Hacemos que la altura sea automática para mantener la proporción de la imagen */
+    display: block;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.atras_btn, .adelante_btn {
+    position: absolute;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(39, 58, 228);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.atras_btn {
+    left: -50px;
+}
+
+.adelante_btn {
+    right: -50px;
+}
+
+.atras_btn:hover, .adelante_btn:hover {
+    transition-duration: .6s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Añadimos estilos para hacer el diseño más responsivo */
+@media screen and (max-width: 768px) {
+    .audio {
+        top: 40px; /* Ajustamos la posición vertical del botón de audio para pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor {
+        max-width: 90%; /* Reducimos el ancho máximo del contenedor en pantallas más pequeñas */
+    }
+
+    .atras_btn, .adelante_btn {
+        font-size: 1.5rem; /* Reducimos el tamaño de los botones de navegación en pantallas más pequeñas */
+        padding: 8px; /* Reducimos el padding de los botones de navegación en pantallas más pequeñas */
+    }
+}
